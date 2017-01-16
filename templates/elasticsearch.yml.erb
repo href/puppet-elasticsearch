@@ -29,7 +29,6 @@ http:
   max_content_length: 500mb
 
 gateway:
-  type: local
   recover_after_nodes: 1
   expected_nodes: 1
 
@@ -43,4 +42,5 @@ discovery:
           - <%= @host %>:<%= @transport_port %>
 
 script:
-  disable_dynamic: true
+  inline: off
+  indexed: off
