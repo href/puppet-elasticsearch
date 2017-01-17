@@ -22,8 +22,6 @@ class elasticsearch(
   $enable         = $elasticsearch::params::enable,
 ) inherits elasticsearch::params {
 
-  include java
-
   class { 'elasticsearch::package':
     ensure  => $ensure,
 

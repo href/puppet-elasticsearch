@@ -32,8 +32,8 @@ class elasticsearch::config(
     ]:
       ensure => $dir_ensure ;
 
-    "${configdir}/logging.yml":
-      content => template('elasticsearch/logging.yml.erb') ;
+    "${configdir}/log4j2.properties":
+      content => template('elasticsearch/log4j2.properties.erb') ;
 
     "${configdir}/elasticsearch.yml":
       content => template('elasticsearch/elasticsearch.yml.erb') ;

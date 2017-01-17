@@ -20,8 +20,8 @@ See the parameters to the elasticsearch class for overrideable values.
 * `boxen` >= 3.3.3
 * `homebrew`
 * `repository`
-* `java`
 * `stdlib`
+
 
 ## Development
 
