@@ -12,8 +12,6 @@ path:
 network:
   host: <%= @host %>
   publish_host: <%= @host %>
-  tcp:
-    blocking: true
 
 transport:
   tcp:
@@ -26,4 +24,3 @@ http:
 gateway:
   recover_after_nodes: 1
   expected_nodes: 1
-  

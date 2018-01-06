@@ -14,10 +14,15 @@
       <integer><%= @http_port %></integer>
     </dict>
 
+    <key>EnvironmentVariables</key>
+    <dict>
+      <key>ES_PATH_CONF</key>
+      <string><%= @configdir %></string>
+    </dict>
+
     <key>ProgramArguments</key>
     <array>
       <string><%= @executable %></string>
-      <string>-Epath.conf=<%= "#{@configdir}" %></string>
     </array>
 
     <key>RunAtLoad</key>
