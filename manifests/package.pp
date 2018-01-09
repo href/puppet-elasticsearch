@@ -11,9 +11,15 @@ class elasticsearch::package(
     default => installed,
   }
 
-  if $::operatingsystem == 'Darwin' {
-    homebrew::formula { 'elasticsearch': }
-  }
+  # if $::operatingsystem == 'Darwin' {
+  #   homebrew::formula { 'elasticsearch': }
+  # }
+
+  package { 'java': 
+    ensure => "present",
+    provider => "brewcask",
+    install_options => ['--appdir=/Applications', "--binarydir=${boxen::config::homebrewdir}/bin"]
+  } ->
 
   package { $package:
     ensure  => $package_ensure,
